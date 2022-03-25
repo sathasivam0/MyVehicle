@@ -320,7 +320,7 @@ public class AddCategoryActivity extends AppCompatActivity implements View.OnCli
                 binding.etAddNameHindi.setError("Name must have atleast 3 characters");
                 binding.etAddNameHindi.requestFocus();
             } else if (myDescription.length() < 4) {
-                binding.etAddDescription.setError("Name must have atleast 3 characters");
+                binding.etAddDescription.setError("Description must have atleast 3 characters");
                 binding.etAddDescription.requestFocus();
             } else {
                 uploadProfileImage();
