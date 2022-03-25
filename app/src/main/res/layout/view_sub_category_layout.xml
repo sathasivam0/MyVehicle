@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/horo_today_view_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:padding="@dimen/_10sdp">
+
+            <View
+                android:id="@+id/view_holder_bar"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d1d1d1"/>
+
+            <TextView
+                android:id="@+id/tv_holder_sub_name_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/practo_regular"
+                android:importantForAutofill="no"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+
+
+            <TextView
+                android:id="@+id/tv_holder_sub_name_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/practo_regular"
+                android:importantForAutofill="no"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/practo_regular"
+                android:text="Description"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tv_holder_sub_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/practo_regular"
+                android:importantForAutofill="no"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+
+            <LinearLayout
+                android:id="@+id/ll_holder_sub_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#43FADDB8"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_holder_sub_sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_holder_sub_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/practo_regular"
+                        android:padding="5dp"
+                        android:text="Sub Category"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/headerIndicator3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/subExpansion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rc_view_sub_category_list1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/view_sub_category_layout" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Vehicle</string>
+    <string name="description">Description</string>
+    <string name="name_in_hindi">Category Name in Hindi</string>
+    <string name="name_in_english">Category Name in English</string>
+    <string name="featured">Featured</string>
+    <string name="add_sub_category">Add Sub Category</string>
+    <string name="add">Add</string>
+    <string name="category">Select Category</string>
+    <string name="sub_category">Select Sub Category</string>
+</resources>
